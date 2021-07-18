@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pagamento.css">
+  </head>
+  <body>
+
+<section class="row container mt-5">
+  <div class="col-md-6 cards" id='lado-esquerdo'>
+    <article style="min-height: 220px;" id="card_frente" class="card card-body">
+      <p class="text-end">FRENTE</p>
+
+      <label>Número</label>
+      <span id=card_number class="h4">0000 0000 0000 0000</span>
+      <br>
+
+      <label>Titular</label>
+      <span id=card_name class="h4">FCO CHIQUIM SILVA</span>
+      <br>
+
+      <label>Validade</label>
+      <span id=card_date class="h4">MM/YY</span>
+      <br>
+    </article>
+
+    <article style="min-height: 220px;" id="card_verso" class="card card-body">
+      <p class="text-end">VERSO</p>
+
+      <label>Código de Segurança</label>
+      <span id=card_cvv class="h4">000</span>
+      <br>
+    </article>
+
+  </div>
+  <div class="col-md-6">
+    <div class="formulario">
+
+    <h1>Pagamento</h1>
+    <hr>
+
+       <form action="">
+
+         <label for="numero">Número do cartão</label><br>
+         <input
+         type="text"
+         id="numero"
+         pattern="[0-9]{16}"
+         placeholder="Ex: 1234 1234 1234 1234"
+         required
+         >
+
+     <br><br>
+
+     <label for="mes">Mês</label>
+     <select id="mes" data-action="date">
+       <option select disable> -- Selecione -- </option>
+      <option value="01">Janeiro</option>
+      <option value="02">Fevereiro</option>
+      <option value="03">Março</option>
+      <option value="04">Abril</option>
+      <option value="05">Maio</option>
+     </select>
+
+    <br><br>
+
+     <label for="ano">Ano</label>
+     <select id="ano" data-action="date">
+       <option select disable value=""> -- Selecione -- </option>
+      <option>2021</option>
+      <option>2022</option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+     </select>
+
+     <br><br>
+
+          <label for="nome">Nome de Titular</label><br>
+          <input type"text" id="nome" required>
+
+     <br><br>
+
+     <label for="codigo">codigo de segurança</label><br>
+     <input
+     type="text"
+     id="codigo"
+     pattern="[0-9]{3}"
+     placeholder="Ex:123"
+     required
+     >
+     <br><br>
+
+     <button>ENVIAR</button>
+
+     <br><br>
+
+    </form>
+
+    </div>
+  </div>
+</section>
+
+
+<script src="js/eventos.js" charset="utf-8"></script>
+
+
+</body>
+
+
+</html>
